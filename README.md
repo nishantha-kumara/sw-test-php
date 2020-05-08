@@ -15,6 +15,7 @@
     ![Test Case](./test_cases.png)
 
 2. You can search resources using the search box. For the first time, all the records are shown in the table format. once you enter the query, records are filtered according to the query.
+![Test Case](./preview.png)
 
 
 If you have any questions feel free to contact me or e-mail (nishantha.plus@gmail.com)
