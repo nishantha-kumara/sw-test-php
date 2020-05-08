@@ -15,7 +15,7 @@
                 <div class="col-10">
                     <div class="form-group">
                         {{Form::label('Query',null,['class'=>"sr-only"])}}
-                        {{Form::text('query', null,['class'=>'form-control','placeholder'=>'query'])}}
+                        {{Form::text('query', app('request')->input('query'),['class'=>'form-control','placeholder'=>'query'])}}
                     </div>
                 </div>
 
@@ -26,7 +26,8 @@
             {!! Form::close() !!}
         </div>
         <div class="col-12">
-        <p>{{count($data)}} record(s) found.</p>
+            <p>{{count($data)}} record(s) found for query <b>
+                    {{ app('request')->input('query')? app('request')->input('query'):'*' }}</b></p>
             <table class="table table-bordered">
                 <thead>
                     <tr>
