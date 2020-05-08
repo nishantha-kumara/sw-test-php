@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+import spices from "./assets/spices.js";
+	
+users=[
+
+{id:1,name:"kamal"},
+{id:2,name:"raama"},
+{id:3,name:"banu"},
+
+]
+
+final=[]
+
+posts=[
+	{id:1, userId:2, title:"goua"},
+	{id:1, userId:1, title:"soda"},
+	{id:1, userId:2, title:"boka"}
+]
+
+users.map(item=>{
+	upost=posts.filter(post=>item.id==post.userId);
+	nitem=item;
+	nitem.posts=upost;
+	final.push(nitem);
+});
+
+console.log(final)
+
+
+</script>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</body>
+</html>
